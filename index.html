@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>DevFolio | Responsive Web Layout</title>
+
+    <meta
+      name="description"
+      content="DevFolio is a clean responsive personal portfolio webpage built for DecodeLabs Frontend Development Internship Batch 2026."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="#home" class="logo" aria-label="DevFolio home">
+          Dev<span>Folio</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          popovertarget="mobile-nav"
+          aria-label="Open navigation menu"
+        >
+          ☰
+        </button>
+
+        <ul class="desktop-nav">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div id="mobile-nav" class="mobile-nav" popover>
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#skills" class="mobile-nav-link">Skills</a>
+          <a href="#projects" class="mobile-nav-link">Projects</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section section-padding">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Frontend Development Intern</p>
+
+            <h1>Building clean responsive web experiences.</h1>
+
+            <p class="hero-text">
+              DevFolio is a modern personal landing page focused on responsive
+              layouts, accessible navigation, clean spacing, and professional
+              frontend structure.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+          </div>
+
+          <div
+            class="hero-visual"
+            aria-label="Developer illustration placeholder"
+          >
+            <div class="avatar-card">
+              <div class="avatar-circle">FA</div>
+              <p>Responsive Layout</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section section-padding">
+        <div class="container about-grid">
+          <div
+            class="profile-placeholder"
+            aria-label="Profile image placeholder"
+          >
+            FA
+          </div>
+
+          <div class="section-content">
+            <p class="eyebrow">About</p>
+
+            <h2>Focused on frontend fundamentals.</h2>
+
+            <p>
+              I am building frontend projects that focus on clean structure,
+              responsive design, readable code, and real-world layout patterns.
+              This page is created as part of the DecodeLabs Frontend
+              Development Internship Batch 2026.
+            </p>
+
+            <p>
+              The goal is simple: create a professional responsive webpage that
+              works well on mobile, tablet, and desktop screens.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section section-padding">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Skills</p>
+            <h2>Core frontend skills</h2>
+            <p>Cards automatically adjust using CSS Grid.</p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-icon">🌐</div>
+              <h3>HTML5</h3>
+              <p>Semantic structure and accessible page sections.</p>
+              <div class="progress-track">
+                <div class="progress-fill progress-html"></div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">🎨</div>
+              <h3>CSS3</h3>
+              <p>Responsive layouts, Grid, Flexbox, and modern styling.</p>
+              <div class="progress-track">
+                <div class="progress-fill progress-css"></div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">⚙️</div>
+              <h3>JavaScript</h3>
+              <p>Interactive behavior and clean frontend logic.</p>
+              <div class="progress-track">
+                <div class="progress-fill progress-js"></div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">📱</div>
+              <h3>Responsive Design</h3>
+              <p>Mobile-first layouts that scale across screen sizes.</p>
+              <div class="progress-track">
+                <div class="progress-fill progress-responsive"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section section-padding">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Featured work</h2>
+            <p>Project cards use Grid outside and Flexbox inside.</p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <img
+                src="assets/images/project-1.jpg"
+                alt="Portfolio Landing Page Preview"
+                class="project-image"
+              />
+
+              <div class="project-body">
+                <h3>Portfolio Landing Page</h3>
+                <p>
+                  A clean personal landing page with responsive sections and
+                  modern layout rules.
+                </p>
+
+                <div class="tag-list">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Responsive</span>
+                </div>
+
+                <a href="#" class="btn btn-card">View Project</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/images/project-2.jpg"
+                alt="Skill Dashboard Preview"
+                class="project-image"
+              />
+
+              <div class="project-body">
+                <h3>Skill Dashboard</h3>
+                <p>
+                  A simple dashboard-style section using cards, spacing, and
+                  visual hierarchy.
+                </p>
+
+                <div class="tag-list">
+                  <span>Grid</span>
+                  <span>Flexbox</span>
+                  <span>UI</span>
+                </div>
+
+                <a href="#" class="btn btn-card">View Project</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/images/project-3.jpg"
+                alt="Contact Form UI Preview"
+                class="project-image"
+              />
+
+              <div class="project-body">
+                <h3>Contact Form UI</h3>
+                <p>
+                  A user-friendly contact section with inline validation and
+                  accessible inputs.
+                </p>
+
+                <div class="tag-list">
+                  <span>JS</span>
+                  <span>Forms</span>
+                  <span>UX</span>
+                </div>
+
+                <a href="#" class="btn btn-card">View Project</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section section-padding">
+        <div class="container contact-grid">
+          <div class="section-content">
+            <p class="eyebrow">Contact</p>
+
+            <h2>Let’s connect.</h2>
+
+            <p>
+              Use the form to send a message. The form will show inline
+              validation without using browser alerts.
+            </p>
+
+            <div class="contact-info">
+              <p><strong>Email:</strong> fazalabbas2002@gmail.com</p>
+              <p><strong>Location:</strong> Karachi, Pakistan</p>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+              />
+              <small class="error-message" id="name-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+              <small class="error-message" id="email-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message"
+              ></textarea>
+              <small class="error-message" id="message-error"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+
+            <p class="success-message" id="success-message"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a href="#home" class="logo">Dev<span>Folio</span></a>
+
+        <div class="social-links">
+          <a
+            href="https://github.com/fazal305"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/fazal-abbas-4653dg86"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+
+        <p>
+          © 2026 DevFolio. Built for DecodeLabs Frontend Development Internship.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
