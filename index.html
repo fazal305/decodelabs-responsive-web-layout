@@ -2,39 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>DevFolio | Responsive Web Layout</title>
-
     <meta
       name="description"
-      content="DevFolio is a clean responsive personal portfolio webpage built for DecodeLabs Frontend Development Internship Batch 2026."
+      content="A responsive portfolio-style web layout built with HTML, CSS, and JavaScript for the DecodeLabs Frontend Development Internship."
     />
+    <title>DecodeLabs Responsive Web Layout</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="navbar container" aria-label="Main navigation">
-        <a href="#home" class="logo" aria-label="DevFolio home">
-          Dev<span>Folio</span>
-        </a>
+        <a href="#home" class="logo" aria-label="DevFolio home"
+          >Dev<span>Folio</span></a
+        >
 
         <button
           class="menu-toggle"
-          popovertarget="mobile-nav"
-          aria-label="Open navigation menu"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
         >
-          ☰
+          Menu
         </button>
 
         <ul class="desktop-nav">
@@ -45,7 +42,7 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
-        <div id="mobile-nav" class="mobile-nav" popover>
+        <div id="mobileNav" class="mobile-nav" hidden>
           <a href="#home" class="mobile-nav-link">Home</a>
           <a href="#about" class="mobile-nav-link">About</a>
           <a href="#skills" class="mobile-nav-link">Skills</a>
@@ -59,14 +56,12 @@
       <section id="home" class="hero-section section-padding">
         <div class="container hero-grid">
           <div class="hero-content">
-            <p class="eyebrow">Frontend Development Intern</p>
-
-            <h1>Building clean responsive web experiences.</h1>
-
+            <p class="eyebrow">DecodeLabs Frontend Internship</p>
+            <h1>Responsive layouts that stay clean on every screen.</h1>
             <p class="hero-text">
-              DevFolio is a modern personal landing page focused on responsive
-              layouts, accessible navigation, clean spacing, and professional
-              frontend structure.
+              DevFolio is a mobile-first portfolio layout built to demonstrate
+              semantic structure, responsive navigation, CSS Grid, Flexbox,
+              fluid spacing, and accessible form behavior.
             </p>
 
             <div class="hero-actions">
@@ -75,13 +70,21 @@
             </div>
           </div>
 
-          <div
-            class="hero-visual"
-            aria-label="Developer illustration placeholder"
-          >
-            <div class="avatar-card">
-              <div class="avatar-circle">FA</div>
-              <p>Responsive Layout</p>
+          <div class="hero-panel" aria-label="Responsive layout summary">
+            <div class="metric-card">
+              <span>01</span>
+              <strong>Mobile-first</strong>
+              <p>Base styles start small and scale upward.</p>
+            </div>
+            <div class="metric-card">
+              <span>02</span>
+              <strong>Grid + Flex</strong>
+              <p>Sections adapt with modern CSS layout tools.</p>
+            </div>
+            <div class="metric-card">
+              <span>03</span>
+              <strong>Accessible UI</strong>
+              <p>Readable labels, focus states, and inline form feedback.</p>
             </div>
           </div>
         </div>
@@ -89,28 +92,23 @@
 
       <section id="about" class="about-section section-padding">
         <div class="container about-grid">
-          <div
-            class="profile-placeholder"
-            aria-label="Profile image placeholder"
-          >
-            FA
+          <div class="profile-card">
+            <div class="profile-mark">FA</div>
+            <p>Frontend Layout Practice</p>
           </div>
 
           <div class="section-content">
             <p class="eyebrow">About</p>
-
-            <h2>Focused on frontend fundamentals.</h2>
-
+            <h2>Built around frontend fundamentals.</h2>
             <p>
-              I am building frontend projects that focus on clean structure,
-              responsive design, readable code, and real-world layout patterns.
-              This page is created as part of the DecodeLabs Frontend
-              Development Internship Batch 2026.
+              This project focuses on the layout skills that make a website feel
+              professional: clear hierarchy, predictable spacing, responsive
+              sections, readable content, and navigation that works across
+              device sizes.
             </p>
-
             <p>
-              The goal is simple: create a professional responsive webpage that
-              works well on mobile, tablet, and desktop screens.
+              The page is intentionally framework-free so the HTML, CSS, and
+              JavaScript decisions are easy to inspect.
             </p>
           </div>
         </div>
@@ -120,42 +118,57 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Skills</p>
-            <h2>Core frontend skills</h2>
-            <p>Cards automatically adjust using CSS Grid.</p>
+            <h2>Core layout skills</h2>
+            <p>
+              Each card is responsive, readable, and built with reusable spacing
+              rules.
+            </p>
           </div>
 
           <div class="skills-grid">
             <article class="skill-card">
-              <div class="skill-icon">🌐</div>
-              <h3>HTML5</h3>
-              <p>Semantic structure and accessible page sections.</p>
+              <span class="skill-code">HTML</span>
+              <h3>Semantic HTML</h3>
+              <p>
+                Structured sections, labels, navigation, forms, and readable
+                document flow.
+              </p>
               <div class="progress-track">
                 <div class="progress-fill progress-html"></div>
               </div>
             </article>
 
             <article class="skill-card">
-              <div class="skill-icon">🎨</div>
-              <h3>CSS3</h3>
-              <p>Responsive layouts, Grid, Flexbox, and modern styling.</p>
+              <span class="skill-code">CSS</span>
+              <h3>Responsive CSS</h3>
+              <p>
+                Mobile-first styles, fluid typography, stable images, and
+                adaptive grids.
+              </p>
               <div class="progress-track">
                 <div class="progress-fill progress-css"></div>
               </div>
             </article>
 
             <article class="skill-card">
-              <div class="skill-icon">⚙️</div>
-              <h3>JavaScript</h3>
-              <p>Interactive behavior and clean frontend logic.</p>
+              <span class="skill-code">JS</span>
+              <h3>Vanilla JavaScript</h3>
+              <p>
+                Small interactions for navigation, form validation, and page
+                feedback.
+              </p>
               <div class="progress-track">
                 <div class="progress-fill progress-js"></div>
               </div>
             </article>
 
             <article class="skill-card">
-              <div class="skill-icon">📱</div>
+              <span class="skill-code">RWD</span>
               <h3>Responsive Design</h3>
-              <p>Mobile-first layouts that scale across screen sizes.</p>
+              <p>
+                Layouts that remain useful on phones, tablets, laptops, and
+                desktops.
+              </p>
               <div class="progress-track">
                 <div class="progress-fill progress-responsive"></div>
               </div>
@@ -168,81 +181,108 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Projects</p>
-            <h2>Featured work</h2>
-            <p>Project cards use Grid outside and Flexbox inside.</p>
+            <h2>Responsive section examples</h2>
+            <p>
+              Cards use real images from the project assets folder and scale
+              with CSS Grid.
+            </p>
           </div>
 
           <div class="projects-grid">
             <article class="project-card">
               <img
                 src="assets/images/project-1.jpg"
-                alt="Portfolio Landing Page Preview"
+                alt="Portfolio landing page preview"
                 class="project-image"
               />
-
               <div class="project-body">
                 <h3>Portfolio Landing Page</h3>
                 <p>
-                  A clean personal landing page with responsive sections and
-                  modern layout rules.
+                  A clean personal landing page structure with strong hero
+                  spacing and responsive calls to action.
                 </p>
-
                 <div class="tag-list">
                   <span>HTML</span>
                   <span>CSS</span>
                   <span>Responsive</span>
                 </div>
-
-                <a href="#" class="btn btn-card">View Project</a>
               </div>
             </article>
 
             <article class="project-card">
               <img
                 src="assets/images/project-2.jpg"
-                alt="Skill Dashboard Preview"
+                alt="Dashboard style card layout preview"
                 class="project-image"
               />
-
               <div class="project-body">
                 <h3>Skill Dashboard</h3>
                 <p>
-                  A simple dashboard-style section using cards, spacing, and
-                  visual hierarchy.
+                  A dashboard-inspired card layout that uses hierarchy, spacing,
+                  and grid behavior.
                 </p>
-
                 <div class="tag-list">
                   <span>Grid</span>
                   <span>Flexbox</span>
-                  <span>UI</span>
+                  <span>Cards</span>
                 </div>
-
-                <a href="#" class="btn btn-card">View Project</a>
               </div>
             </article>
 
             <article class="project-card">
               <img
                 src="assets/images/project-3.jpg"
-                alt="Contact Form UI Preview"
+                alt="Contact form interface preview"
                 class="project-image"
               />
-
               <div class="project-body">
                 <h3>Contact Form UI</h3>
                 <p>
-                  A user-friendly contact section with inline validation and
-                  accessible inputs.
+                  An accessible contact section with labels, validation
+                  messages, and responsive fields.
                 </p>
-
                 <div class="tag-list">
-                  <span>JS</span>
                   <span>Forms</span>
+                  <span>Validation</span>
                   <span>UX</span>
                 </div>
-
-                <a href="#" class="btn btn-card">View Project</a>
               </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-section section-padding">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Process</p>
+            <h2>How the layout adapts</h2>
+          </div>
+
+          <div class="process-grid">
+            <article>
+              <span>1</span>
+              <h3>Start Small</h3>
+              <p>
+                Single-column mobile layouts are the base, keeping content
+                readable first.
+              </p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>Add Space</h3>
+              <p>
+                Tablet widths introduce stronger grids, improved spacing, and
+                wider cards.
+              </p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>Scale Up</h3>
+              <p>
+                Desktop screens use multi-column sections without crowding the
+                content.
+              </p>
             </article>
           </div>
         </div>
@@ -252,30 +292,28 @@
         <div class="container contact-grid">
           <div class="section-content">
             <p class="eyebrow">Contact</p>
-
-            <h2>Let’s connect.</h2>
-
+            <h2>Let us connect.</h2>
             <p>
-              Use the form to send a message. The form will show inline
-              validation without using browser alerts.
+              Use the form to test inline validation. The demo keeps feedback on
+              the page instead of using browser alerts.
             </p>
 
             <div class="contact-info">
-              <p><strong>Email:</strong> fazalabbas2002@gmail.com</p>
-              <p><strong>Location:</strong> Karachi, Pakistan</p>
+              <p>Email: fazal305@example.com</p>
+              <p>Location: Karachi, Pakistan</p>
             </div>
           </div>
 
-          <form class="contact-form" id="contact-form" novalidate>
+          <form class="contact-form" id="contactForm" novalidate>
             <div class="form-group">
               <label for="name">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Enter your name"
+                placeholder="Your name"
               />
-              <small class="error-message" id="name-error"></small>
+              <small class="error-message" id="nameError"></small>
             </div>
 
             <div class="form-group">
@@ -284,9 +322,9 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Enter your email"
+                placeholder="you@example.com"
               />
-              <small class="error-message" id="email-error"></small>
+              <small class="error-message" id="emailError"></small>
             </div>
 
             <div class="form-group">
@@ -294,15 +332,13 @@
               <textarea
                 id="message"
                 name="message"
-                rows="5"
-                placeholder="Write your message"
+                placeholder="Write a short message"
               ></textarea>
-              <small class="error-message" id="message-error"></small>
+              <small class="error-message" id="messageError"></small>
             </div>
 
             <button type="submit" class="btn btn-primary">Send Message</button>
-
-            <p class="success-message" id="success-message"></p>
+            <p class="success-message" id="successMessage"></p>
           </form>
         </div>
       </section>
@@ -311,25 +347,18 @@
     <footer class="site-footer">
       <div class="container footer-content">
         <a href="#home" class="logo">Dev<span>Folio</span></a>
-
+        <p>Responsive Web Layout - DecodeLabs Internship 2026</p>
         <div class="social-links">
-          <a
-            href="https://github.com/fazal305"
-            target="_blank"
-            rel="noopener noreferrer"
+          <a href="https://github.com/fazal305" target="_blank" rel="noreferrer"
             >GitHub</a
           >
           <a
             href="https://www.linkedin.com/in/fazal-abbas-4653dg86"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             >LinkedIn</a
           >
         </div>
-
-        <p>
-          © 2026 DevFolio. Built for DecodeLabs Frontend Development Internship.
-        </p>
       </div>
     </footer>
 

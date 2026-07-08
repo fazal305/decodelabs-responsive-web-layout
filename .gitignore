@@ -1,17 +1,14 @@
-# OS Files
-
+# OS files
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-# VS Code
-
+# Editor settings
 .vscode/
+.idea/
 
-# Logs
-
+# Logs and temporary files
 *.log
-
-# Temporary Files
-
 *.tmp
 *.temp
+*.bak

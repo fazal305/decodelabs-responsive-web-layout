@@ -1,253 +1,86 @@
-# DevFolio — Responsive Web Layout
+# DecodeLabs Responsive Web Layout
 
-A clean, modern, mobile-first responsive portfolio website built for the DecodeLabs Frontend Development Internship (Batch 2026).
+A polished responsive portfolio-style web layout built with HTML, CSS, and vanilla JavaScript for the DecodeLabs Frontend Development Internship.
 
----
+The project demonstrates mobile-first layout planning, semantic HTML, responsive navigation, CSS Grid, Flexbox, fluid typography, real project imagery, and accessible form validation.
 
-## Project Overview
+## Live Demo
 
-DevFolio is a professional responsive web layout project created to demonstrate modern frontend development practices.
+https://fazal305.github.io/decodelabs-responsive-web-layout/
 
-The project focuses on:
+## Repository
 
-- Mobile-first design
-- Responsive layouts
-- CSS Grid and Flexbox
-- Fluid typography
-- Accessibility best practices
-- Semantic HTML5
-- Modern responsive navigation
-- Form validation with Vanilla JavaScript
-
-This project was developed as part of the DecodeLabs Frontend Development Internship Program.
-
----
+https://github.com/fazal305/decodelabs-responsive-web-layout
 
 ## Features
 
-### Responsive Navigation
+- Mobile-first responsive page layout
+- Sticky navigation with desktop and mobile states
+- Smooth scrolling for section links
+- Hero, about, skills, projects, process, and contact sections
+- CSS Grid and Flexbox layout systems
+- Fluid typography with `clamp()`
+- Real project preview images from `assets/images`
+- Accessible contact form labels and inline validation
+- Lightweight JavaScript with no framework dependency
+- Clean structure for portfolio presentation
 
-- Fixed navigation bar
-- Desktop horizontal navigation
-- Mobile hamburger menu
-- HTML Popover API implementation
-- Smooth scrolling navigation
-
-### Hero Section
-
-- Full viewport hero layout
-- CSS Grid structure
-- Fluid typography using clamp()
-- Responsive call-to-action buttons
-
-### About Section
-
-- Responsive two-column layout
-- Profile placeholder
-- Clean readable content structure
-
-### Skills Section
-
-- CSS Grid powered skill cards
-- Auto-responsive layout
-- Visual progress indicators
-
-### Projects Section
-
-- Responsive project showcase
-- Real project preview images
-- Flexible card layouts
-- Hover effects
-
-### Contact Section
-
-- Responsive contact layout
-- Inline form validation
-- Accessible form controls
-
-### Footer
-
-- Social links
-- Responsive alignment
-- Professional layout
-
----
-
-## Technologies Used
+## Tech Stack
 
 - HTML5
 - CSS3
 - Vanilla JavaScript
 - CSS Grid
-- CSS Flexbox
-- HTML Popover API
-- Google Fonts (Inter)
+- Flexbox
+- Google Fonts
 
----
-
-## Responsive Breakpoints
-
-| Device | Breakpoint |
-|----------|----------|
-| Mobile | 0px+ |
-| Small Devices | 480px+ |
-| Tablet | 768px+ |
-| Desktop | 1024px+ |
-
----
-
-## Responsive Concepts Demonstrated
-
-### Mobile-First Design
-
-Base styles are written for mobile devices first.
-
-Additional layouts are progressively enhanced using:
-
-```css
-@media (min-width: ...)
-```
-
-### CSS Grid
-
-Used for:
-
-- Hero Layout
-- About Layout
-- Skills Layout
-- Projects Layout
-- Contact Layout
-
-### Flexbox
-
-Used for:
-
-- Navigation
-- Button Groups
-- Card Content
-- Tags
-- Footer Layout
-
-### Fluid Typography
-
-Implemented using:
-
-```css
-clamp(minimum, ideal, maximum)
-```
-
-Example:
-
-```css
-font-size: clamp(2.5rem, 6vw, 4rem);
-```
-
-### Accessibility
-
-Implemented:
-
-- Semantic HTML
-- Proper labels
-- Responsive touch targets
-- Keyboard accessibility
-- Mobile-friendly navigation
-- WCAG-friendly viewport settings
-
----
-
-## Folder Structure
+## Project Structure
 
 ```text
-decodelabs-responsive-web-layout
-│
-├── index.html
-├── styles.css
-├── script.js
-│
-└── assets
-    │
-    └── images
+decodelabs-responsive-web-layout/
+|-- index.html
+|-- styles.css
+|-- script.js
+|-- README.md
+|-- LICENSE
+|-- .gitignore
+`-- assets/
+    `-- images/
+        |-- project-1.jpg
+        |-- project-2.jpg
+        `-- project-3.jpg
 ```
 
----
+## Responsive Concepts Practiced
 
-## Live Demo
-
-🌐 GitHub Pages
-
-https://fazal305.github.io/decodelabs-responsive-web-layout/
-
----
-
-## GitHub Repository
-
-📂 Repository
-
-https://github.com/fazal305/decodelabs-responsive-web-layout
-
----
+- Mobile-first base styles
+- Breakpoint-based layout enhancement
+- Flexible containers with `min()`, `max-width`, and `auto-fit`
+- Responsive image cards with stable aspect ratios
+- Touch-friendly mobile navigation
+- Form feedback without browser alerts
 
 ## Run Locally
 
-Clone the repository:
+1. Clone the repository.
+2. Open the project folder.
+3. Launch `index.html` in a browser.
 
-```bash
-git clone https://github.com/fazal305/decodelabs-responsive-web-layout.git
-```
-
-Open the project folder:
-
-```bash
-cd decodelabs-responsive-web-layout
-```
-
-Launch:
-
-```text
-index.html
-```
-
-or run using VS Code Live Server.
-
----
+No build step or dependency installation is required.
 
 ## Internship Information
 
-**Project:** Responsive Web Layout
-
-**Internship:** DecodeLabs Frontend Development Internship
-
-**Batch:** 2026
-
----
-
-## Learning Outcomes
-
-This project helped reinforce:
-
-- Mobile-first development
-- Responsive design principles
-- CSS Grid layouts
-- Flexbox layouts
-- Fluid typography
-- Accessibility standards
-- Modern frontend structure
-- Responsive navigation techniques
-
----
+- Project: Responsive Web Layout
+- Internship: DecodeLabs Frontend Development Internship
+- Batch: 2026
 
 ## Author
 
-### Fazal Abbas
+Fazal Abbas
 
-GitHub
+- GitHub: https://github.com/fazal305
+- LinkedIn: https://www.linkedin.com/in/fazal-abbas-4653dg86
 
-https://github.com/fazal305
+## License
 
-LinkedIn
-
-https://www.linkedin.com/in/fazal-abbas-4653dg86
-
----
-
-© 2026 Fazal Abbas — DecodeLabs Frontend Development Internship Project
+This project is licensed under the MIT License.

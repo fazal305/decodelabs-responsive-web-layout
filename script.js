@@ -1,11 +1,40 @@
-// Smoothly scrolls to page sections and closes the mobile menu
+const menuToggle = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("mobileNav");
+const contactForm = document.getElementById("contactForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+const successMessage = document.getElementById("successMessage");
+
+function toggleMobileMenu() {
+    const isOpen = !mobileNav.hidden;
+
+    mobileNav.hidden = isOpen;
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    menuToggle.textContent = isOpen ? "Menu" : "Close";
+}
+
+function setupMobileMenu() {
+    menuToggle.addEventListener("click", toggleMobileMenu);
+
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            mobileNav.hidden = true;
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "Menu";
+        });
+    });
+}
+
 function setupSmoothScroll() {
     const pageLinks = document.querySelectorAll('a[href^="#"]');
-    const mobileNav = document.getElementById('mobile-nav');
 
     pageLinks.forEach(function (link) {
-        link.addEventListener('click', function (event) {
-            const targetId = link.getAttribute('href');
+        link.addEventListener("click", function (event) {
+            const targetId = link.getAttribute("href");
             const targetSection = document.querySelector(targetId);
 
             if (!targetSection) {
@@ -13,64 +42,70 @@ function setupSmoothScroll() {
             }
 
             event.preventDefault();
-
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-
-            if (mobileNav && mobileNav.matches(':popover-open')) {
-                mobileNav.hidePopover();
-            }
+            targetSection.scrollIntoView({ behavior: "smooth" });
         });
     });
 }
 
-// Validates the contact form and shows inline messages
 function setupContactFormValidation() {
-    const contactForm = document.getElementById('contact-form');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
-
-    const nameError = document.getElementById('name-error');
-    const emailError = document.getElementById('email-error');
-    const messageError = document.getElementById('message-error');
-    const successMessage = document.getElementById('success-message');
-
-    contactForm.addEventListener('submit', function (event) {
+    contactForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        let formIsValid = true;
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isMessageValid = validateMessage();
 
-        nameError.textContent = '';
-        emailError.textContent = '';
-        messageError.textContent = '';
-        successMessage.textContent = '';
+        successMessage.textContent = "";
 
-        if (nameInput.value.trim() === '') {
-            nameError.textContent = 'Please enter your name.';
-            formIsValid = false;
-        }
-
-        if (emailInput.value.trim() === '') {
-            emailError.textContent = 'Please enter your email.';
-            formIsValid = false;
-        } else if (!emailInput.value.includes('@') || !emailInput.value.includes('.')) {
-            emailError.textContent = 'Please enter a valid email address.';
-            formIsValid = false;
-        }
-
-        if (messageInput.value.trim() === '') {
-            messageError.textContent = 'Please write your message.';
-            formIsValid = false;
-        }
-
-        if (formIsValid) {
-            successMessage.textContent = 'Message sent successfully. Thank you!';
+        if (isNameValid && isEmailValid && isMessageValid) {
+            successMessage.textContent = "Message sent successfully. Thank you!";
             contactForm.reset();
         }
     });
+
+    nameInput.addEventListener("input", validateName);
+    emailInput.addEventListener("input", validateEmail);
+    messageInput.addEventListener("input", validateMessage);
 }
 
+function validateName() {
+    if (nameInput.value.trim() === "") {
+        nameError.textContent = "Please enter your name.";
+        return false;
+    }
+
+    nameError.textContent = "";
+    return true;
+}
+
+function validateEmail() {
+    const email = emailInput.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "") {
+        emailError.textContent = "Please enter your email.";
+        return false;
+    }
+
+    if (!emailPattern.test(email)) {
+        emailError.textContent = "Please enter a valid email address.";
+        return false;
+    }
+
+    emailError.textContent = "";
+    return true;
+}
+
+function validateMessage() {
+    if (messageInput.value.trim() === "") {
+        messageError.textContent = "Please write your message.";
+        return false;
+    }
+
+    messageError.textContent = "";
+    return true;
+}
+
+setupMobileMenu();
 setupSmoothScroll();
 setupContactFormValidation();
