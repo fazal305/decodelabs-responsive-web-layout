@@ -24,7 +24,7 @@ html {
 body {
   min-height: 100vh;
   color: var(--text-main);
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Outfit", Arial, sans-serif;
   background:
     radial-gradient(
       circle at top left,
